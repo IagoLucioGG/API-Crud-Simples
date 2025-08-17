@@ -23,6 +23,17 @@ namespace CoreData.Services.Base
 
             return ResponseModel<TEntity>.Sucesso(entidade, $"{nomeEntidade} encontrado com sucesso.");
         }
+        public virtual async Task<ResponseModel<TModelo>> ObterPorIdModelo<TModelo>(int id) where TModelo : class
+        {
+            var entidade = await _context.Set<TModelo>().FindAsync(id);
+            var nomeEntidade = typeof(TModelo).Name;
+
+            if (entidade == null)
+                return ResponseModel<TModelo>.Erro($"{nomeEntidade} não encontrado.");
+
+            return ResponseModel<TModelo>.Sucesso(entidade, $"{nomeEntidade} encontrado com sucesso.");
+        }
+
 
         public virtual async Task<ResponseModel<List<TEntity>>> ListarTodos()
         {
