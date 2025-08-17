@@ -32,7 +32,7 @@ Atualmente, a aplicação possui funcionalidades básicas implementadas, incluin
 - ✅ **Tratamento de exceções customizado** (NotFound, Conflito, Dados incorretos)  
 - ✅ **Endpoints REST** para operações CRUD  
 
-> O projeto foi iniciado recentemente e encontra-se em **aproximadamente 25% de conclusão**.
+> O projeto foi iniciado recentemente e encontra-se em **aproximadamente 50% de conclusão**.
 
 ---
 

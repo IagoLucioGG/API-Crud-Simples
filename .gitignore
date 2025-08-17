@@ -1,6 +1,7 @@
 # Ignorar pastas de build
 bin/
 obj/
+Migrations/
 
 # Ignorar arquivos temporários ou do sistema
 *.log

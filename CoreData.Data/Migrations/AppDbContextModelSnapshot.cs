@@ -58,6 +58,38 @@ namespace CoreData.Data.Migrations
                     b.ToTable("Clientes");
                 });
 
+            modelBuilder.Entity("CoreData.Models.Produtos.Produto", b =>
+                {
+                    b.Property<int>("IdProduto")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdProduto"));
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("CdChamada")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NmProduto")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Preco")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdProduto");
+
+                    b.ToTable("Produtos");
+                });
+
             modelBuilder.Entity("CoreData.Models.Usuario.Usuario", b =>
                 {
                     b.Property<int>("IdUsuario")
