@@ -1,4 +1,4 @@
-using CoreData.DTOs;
+using CoreData.DTOs.Usuario;
 using CoreData.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

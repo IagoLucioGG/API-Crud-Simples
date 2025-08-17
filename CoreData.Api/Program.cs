@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Builder;
+using CoreData.Services.Clientes;
 
 
 
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Serviço de usuário
 builder.Services.AddScoped<UsuarioServico>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
 
 // JWT
 var chave = builder.Configuration["Jwt:Chave"];

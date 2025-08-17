@@ -11,9 +11,9 @@ namespace CoreData.Api.Controllers
     [Route("cliente")]
     public class ClienteController : ControllerBase
     {
-        private readonly ClienteService _service;
+        private readonly IClienteService _service;
 
-        public ClienteController(ClienteService service)
+        public ClienteController(IClienteService service)
         {
             _service = service;
         }

@@ -55,14 +55,14 @@ namespace CoreData.Services.Clientes
 
         public async Task<ResponseModel<Cliente>> EditarCliente(ClienteDto dto, int idCliente)
         {
-            ValidarCpfCnpj(dto);
-            await VerificarDuplicado(dto, 2, idCliente);
-
             var clienteExistente = await ObterPorId(idCliente);
             if (clienteExistente.Dados == null)
                 throw new NotFoundException<Cliente>(
                     ResponseModel<Cliente>.Erro("Cliente não encontrado na base com esse Id.")
                 );
+
+            ValidarCpfCnpj(dto);
+            await VerificarDuplicado(dto, 2, idCliente);
 
             MapeadorModels.CopiarPropriedades(dto, clienteExistente.Dados);
 
