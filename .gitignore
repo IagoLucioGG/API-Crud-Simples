@@ -1,0 +1,12 @@
+# Ignorar pastas de build
+bin/
+obj/
+
+# Ignorar arquivos temporários ou do sistema
+*.log
+*.tmp
+.DS_Store
+
+# Ignorar pastas específicas
+bim/
+outros/
